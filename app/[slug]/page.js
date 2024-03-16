@@ -1,4 +1,5 @@
 import { Heading, Image, Flex, Text, ChakraProvider, Box } from "@chakra-ui/react";
+import NavBar from "../components/NavBar";
 
 export default async function Article({ params }) { // params wont be available in nested components
     function db() {
@@ -20,6 +21,7 @@ export default async function Article({ params }) { // params wont be available 
 
     return (
         <ChakraProvider>
+            <NavBar />
             <Flex flexDir='column' w={{ base: '80%', lg: '889px' }} m='auto' mt={{ base: '85px', lg: '164px' }}>
                 <Image src={`https://writers.explorethebuzz.com${data.featureImage.url}`} m={{ base: 'auto auto 15px auto', lg: 'auto' }} w={{ base: '100%', lg: '889px' }} borderRadius='16px' />
                 <Heading fontSize={{ base: '20px', lg: '40px' }} m='0' my={{ base: '20px', lg: '30px' }}>{data.title}</Heading>

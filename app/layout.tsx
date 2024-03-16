@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 import { ChakraProvider } from "@chakra-ui/react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({ subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,11 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header >
+        {/* <header >
           <ChakraProvider>
             <NavBar />
           </ChakraProvider>
-        </header>
+        </header> */}
         {children}
       </body>
     </html>
